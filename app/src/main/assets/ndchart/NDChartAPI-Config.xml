@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NDChartAPIConfig>
+
+    <hosts
+        defaultConn="3"
+        pollType="3"
+        qup="1" >
+
+        <host server="https://mobile-balancer.netdania.com/StreamingServer/StreamingServer" />
+
+        <host server="https://balancer-cro.netdania.com/StreamingServer/StreamingServer" />
+    </hosts>
+
+    <themes default="Black" >
+        <theme
+            name="Gray"
+            backgroundcolor="545454"
+            buttoncolor="ff00ddff"
+            crosshairtextcolor="00ddff"
+            crosshairbgcolor="DD131313" >
+
+            <headerskin
+                backColor="333333"
+                fontColor="eeeeee"
+                foreColor="ffffff" />
+
+            <lines
+                evenBackColor="717171"
+                newsSeparator="00000000"
+                normalFontColor="ffffff"
+                oddBackColor="676767"
+                separator="00000000"
+                timeFontColor="222222" />
+
+            <actionBar
+                actionBarColor="ff545454"
+                actionBarFontColor="99ffffff"
+                iconColor="99ffffff"
+                iconSecondaryColor="99999999"
+                stateColor="99666666" />
+
+            <chart
+                axisColor="FEFEFE"
+                axisLabelColor="FEFEFE"
+                backgroundColor="545454"
+                defaultLineColor="ffcc00"
+                titleColor="FEFEFE" />
+
+            <studies colors="FF3939,5638B4,2ECF2E,9B0000,007C00,FF9339,FFFFFF,9B4600,440467,FFFF39,000000,9B9B00,249F9F,005D5D,D02E8A,B1EF35" />
+        </theme>
+
+        <theme
+            name="White"
+            backgroundcolor="FEFEFE"
+            buttoncolor="ff00ddff"
+            crosshairtextcolor="00ddff"
+            crosshairbgcolor="DD131313">
+
+            <headerskin
+                backColor="CCCCCC"
+                fontColor="000000"
+                foreColor="000000" />
+
+            <lines
+                evenBackColor="F2F2F2"
+                newsSeparator="A0A0A0"
+                normalFontColor="000000"
+                oddBackColor="F5F5F5"
+                separator="A0A0A0"
+                timeFontColor="777777" />
+
+            <actionBar
+                actionBarColor="ffcccccc"
+                actionBarFontColor="ff111111"
+                iconColor="99333333"
+                iconSecondaryColor="99333333"
+                stateColor="33666666" />
+
+            <chart
+                axisColor="545454"
+                axisLabelColor="545454"
+                backgroundColor="FEFEFE"
+                defaultLineColor="ff3300"
+                titleColor="545454" />
+
+            <studies colors="FF3939,5638B4,2ECF2E,9B0000,007C00,FF9339,9B9B00,440467,FFFF39,000000,249F9F,D02E8A,005D5D,B1EF35,555555" />
+        </theme>
+
+        <theme
+            name="Black"
+            backgroundcolor="0E0E0E"
+            buttoncolor="ff00ddff"
+            crosshairtextcolor="00ddff"
+            crosshairbgcolor="DD131313">
+
+            <headerskin
+                backColor="000000"
+                fontColor="eeeeee"
+                foreColor="ffffff" />
+
+            <lines
+                evenBackColor="171717"
+                newsSeparator="000000"
+                normalFontColor="eeeeee"
+                oddBackColor="141414"
+                separator="000000"
+                timeFontColor="aaaaaa" />
+
+            <actionBar
+                actionBarColor="ff101010"
+                actionBarFontColor="ffaaaaaa"
+                iconColor="99cccccc"
+                iconSecondaryColor="99333333"
+                stateColor="55666666" />
+
+            <chart
+                axisColor="FEFEFE"
+                axisLabelColor="FEFEFE"
+                backgroundColor="0E0E0E"
+                defaultLineColor="ff7f00"
+                titleColor="FEFEFE" />
+
+            <studies colors="FF1919,FFD719,B5A0F7,FF9A9A,5F31F3,97FA97,FF8119,14D114,17F0F0,B1FD19,2C75FF,A923F3,F81897,FFFFFF,A9A9A9" />
+        </theme>
+
+        <theme
+            name="Blue"
+            backgroundcolor="071C42"
+            buttoncolor="ff00ddff"
+            crosshairtextcolor="00ddff"
+            crosshairbgcolor="DD131313">
+
+            <headerskin
+                backColor="071C42"
+                fontColor="eeeeee"
+                foreColor="ffffff" />
+
+            <lines
+                evenBackColor="0F2142"
+                newsSeparator="00000000"
+                normalFontColor="ffffff"
+                oddBackColor="0A2047"
+                separator="00000000"
+                timeFontColor="aaaaaa" />
+
+            <actionBar
+                actionBarColor="ff071C42"
+                actionBarFontColor="ffaaaaaa"
+                iconColor="99cccccc"
+                iconSecondaryColor="99333333"
+                stateColor="55666666" />
+
+            <chart
+                axisColor="FEFEFE"
+                axisLabelColor="FEFEFE"
+                backgroundColor="071C42"
+                defaultLineColor="ff7f00"
+                titleColor="FEFEFE" />
+
+            <studies colors="FF1919,FFD719,B5A0F7,FF9A9A,FF8119,97FA97,14D114,17F0F0,B1FD19,597DFF,A923F3,F81897,FFFFFF,A9A9A9" />
+        </theme>
+    </themes>
+
+    <analyses_config maxAnalyses="1000">
+        <provider name="netdania_analyses">
+            <partener code="tradenetworks"/>
+        </provider>
+    </analyses_config>
+
+</NDChartAPIConfig>

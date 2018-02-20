@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:id="@+id/card_viewRoot"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/ad_entity_photo_60"
+            android:layout_height="@dimen/ad_entity_photo_60"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/ad_item_spacing_2"
+            android:background="@drawable/male_07"
+            android:contentDescription="@string/messenger_cd_profile_pic_description" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bold"
+            android:text="@string/profile_Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_item_name_textSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profile_Country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center"
+            android:layout_marginTop="5dp"
+            android:text="@string/profile_Country"
+            android:textColor="@color/greyBlue"
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/profile_item_name_textSize"
+            android:visibility="visible" />
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/ad_item_spacing_14"
+            android:background="@color/whiteTwo"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:src="@mipmap/score_grey" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:src="@mipmap/return_grey" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:src="@mipmap/time_grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvFigsAnalyticsScore"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/month_3m"
+                app:fontFamily="@font/bold"
+                android:textColor="@color/cobalt"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvAverageReturns"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/month_6m"
+                app:fontFamily="@font/bold"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvAverageTimeForReturns"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/month_9m"
+                app:fontFamily="@font/bold"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:text="@string/FIGS_Analytics_Score"
+                android:textColor="@color/blueyGreyThree" />
+
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:text="@string/AverageReturns"
+                android:textColor="@color/blueyGreyThree" />
+
+            <android.support.v7.widget.AppCompatTextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:text="@string/AverageTimeforReturn"
+                android:textColor="@color/blueyGreyThree" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+

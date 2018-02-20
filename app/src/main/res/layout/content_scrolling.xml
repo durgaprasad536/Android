@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.figsinc.app.learn.sector.SectorDetailsActivity"
+    tools:showIn="@layout/activity_profile_new">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_entity_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/textView_entity_subheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/tealish"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/whiteTwo"></View>
+
+        <LinearLayout
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_collapseMode="pin">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/button_calculator"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@mipmap/calculator_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/button_save"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@mipmap/save_grey"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+
+                    android:id="@+id/button_forward"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/forward_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/button_dollar"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@mipmap/trade" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/whiteTwo"></View>
+
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            card_view:cardUseCompatPadding="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background"></View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/title_OverView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <TextView
+                    android:id="@+id/entities_update_company_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/regular"
+                    android:maxLines="5"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearShowDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <include layout="@layout/separator"></include>
+
+                    <TextView
+                        android:id="@+id/entities_showDetails"
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/title_Show_Details"
+                        android:textColor="@color/tealish" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/background"
+            android:visibility="gone"></View>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entities_Title1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Biotechnology Option"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                    <include layout="@layout/separator"></include>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/filter1_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/white"
+                        android:fillViewport="true"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/background"></View>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entities_Title2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Top Stock Holdings"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:visibility="gone" />
+
+                    <include
+                        layout="@layout/separator"
+                        android:visibility="gone"></include>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/filter2_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/white"
+                        android:paddingBottom="50dp"
+                        android:paddingTop="10dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_report"
+        android:orderInCategory="100"
+        android:icon="@mipmap/report_grey"
+        android:title="@string/action_report"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/action_infographic"
+        android:orderInCategory="100"
+        android:icon="@mipmap/infographic_grey"
+        android:title="@string/action_Infographic"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/action_video"
+        android:orderInCategory="100"
+        android:title="@string/action_Video"
+        android:icon="@mipmap/video_grey"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/action_news"
+        android:orderInCategory="100"
+        android:icon="@mipmap/news_grey"
+        android:title="@string/action_News"
+        app:showAsAction="never"></item>
+
+</menu>

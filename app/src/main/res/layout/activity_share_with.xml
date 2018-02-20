@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/ad_item_spacing_8"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/ad_entity_photo_3"
+        android:layout_height="@dimen/ad_entity_photo_3"
+        android:background="@drawable/oval"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/ad_item_spacing_2"
+        android:contentDescription="@string/messenger_cd_profile_pic_description"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|center_vertical"
+        android:layout_marginBottom="@dimen/ad_item_spacing_2"
+        android:layout_marginTop="@dimen/ad_item_spacing_2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:text="Mark Jedidiah"
+            android:textSize="@dimen/profile_item_name_textSize"
+            android:textAlignment="viewStart"
+            />
+
+        <TextView
+            android:id="@+id/profile_headline"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ad_item_spacing_4"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="Singapore, Singapore"
+            android:textAlignment="viewStart"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginRight="7dp"
+        android:layout_gravity="center"
+        android:id="@+id/connection_decline"
+        android:layout_width="48dp"
+        android:background="@drawable/circle_decline"
+        android:layout_height="48dp">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="15dp"
+            android:src="@drawable/decline"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/messenger_cd_right_arrow_description" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginRight="7dp"
+        android:layout_gravity="center"
+        android:id="@+id/connection_accept"
+        android:layout_width="48dp"
+        android:background="@drawable/circle_accept"
+        android:layout_height="48dp">
+        <ImageView
+            android:id="@+id/profile_navigator"
+            android:layout_width="18dp"
+            android:layout_height="15dp"
+            android:src="@drawable/active"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/messenger_cd_right_arrow_description" />
+
+    </RelativeLayout>
+</LinearLayout>
+    <!--
+        android:background="@drawable/quick_intro_item_card_background"-->

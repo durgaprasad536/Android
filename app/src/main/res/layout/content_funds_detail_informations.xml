@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/title_OverView"
+                    android:fontFamily="@font/regular"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/title_FundType"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:fontFamily="@font/regular"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvFundType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:fontFamily="@font/semibold"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/title_Geographical_Focus"
+                        android:textColor="@color/greyBlue"
+                        android:fontFamily="@font/regular"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvGeographicalFocus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:fontFamily="@font/semibold"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_Launch_Date"
+                        android:textColor="@color/greyBlue"
+                        android:fontFamily="@font/regular"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvLaunchDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_Domicile"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvDomicile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:fontFamily="@font/semibold"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_Currency"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvCurrency"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:fontFamily="@font/semibold"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_Legal_Structure"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:fontFamily="@font/regular"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvLegalStructure"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:fontFamily="@font/semibold"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_NAV_as_of"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:fontFamily="@font/regular"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvNAVasof"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:id="@+id/textAumTitle"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_AuM_as_of"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvAuMasof"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/semibold"
+                        android:layout_weight="2"
+                        android:inputType="number"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_ISIN"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvISIN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/entities_overview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/title_Benchmarks"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Technical_Indicator"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvTechnical_Indicator"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_Risk_Free"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvRisk_Free"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:fontFamily="@font/semibold"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:text="@string/title_Fund_Manager"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvFundManager"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

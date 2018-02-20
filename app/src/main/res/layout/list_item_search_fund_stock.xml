@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_photoChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/ad_entity_photo_3"
+            android:layout_height="@dimen/ad_entity_photo_3"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/ad_item_spacing_2"
+            android:visibility="gone"
+            android:background="@drawable/male_07"
+            android:contentDescription="@string/messenger_cd_profile_pic_description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/ad_item_spacing_2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/ad_item_spacing_2"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvIncName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:singleLine="false"
+                android:text="Mark Jedidiah"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/profile_item_name_textSize" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/ad_item_spacing_2"
+                android:text="Singapore, Singapore Singapore "
+                android:textAlignment="viewStart"
+                android:maxLines="2" android:ellipsize="end"
+                android:lines="2"
+                android:textSize="@dimen/sp_13"
+                android:textStyle="italic"
+                android:layout_marginTop="@dimen/ad_item_spacing_2"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/root_card_view"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--card_view:cardBackgroundColor="@android:color/white"-->
+    <!--card_view:cardCornerRadius="0dp"-->
+    <!--android:layout_marginLeft="7dp"-->
+    <!--android:layout_marginRight="7dp"-->
+    <!--card_view:cardUseCompatPadding="false">-->
+
+
+    <!--<android.support.v7.widget.AppCompatTextView-->
+        <!--android:id="@+id/tvIncName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@font/semibold"-->
+        <!--android:maxLines="1"-->
+        <!--android:singleLine="false"-->
+        <!--android:ellipsize="end"-->
+        <!--android:text="Alphabet Inc."-->
+        <!--android:textColor="@color/black" />-->
+
+    <!--<android.support.v7.widget.AppCompatTextView-->
+        <!--android:id="@+id/tv_company_name"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:fontFamily="@font/regular"-->
+        <!--android:maxLines="2"-->
+        <!--android:singleLine="false"-->
+        <!--android:text=""-->
+        <!--android:ellipsize="end"-->
+        <!--android:textColor="@color/greyBlue"-->
+        <!--android:textStyle="normal" />-->
+
+
+    <!--<include layout="@layout/separator_without_top_margin"></include>-->
+
+<!--</LinearLayout>-->

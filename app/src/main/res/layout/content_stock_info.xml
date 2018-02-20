@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.figsinc.app.learn.LearnActivity"
+    tools:showIn="@layout/activity_stock_info">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/textView_entity_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_entity_subheader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/whiteTwo"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_collapseMode="pin">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/button_calculator"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@mipmap/calculator_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/button_viewChart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="11dp"
+                    android:text="View Chart"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/blueyGreyThree"
+                    android:fontFamily="@font/bold"
+                    android:drawableLeft="@mipmap/active" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/button_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@mipmap/save"
+                    android:text="Save Stock"
+                    android:fontFamily="@font/bold"
+                    android:drawablePadding="11dp"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/darkish_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+
+                    android:id="@+id/button_forward"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/forward_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/button_dollar"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@mipmap/trade" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/whiteTwo"></View>
+
+        <TextView
+            android:id="@+id/textNetdhania"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Click to load chart"
+            android:textSize="@dimen/text_size_20"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/chart_command_list"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/white"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/chartFrame"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_toRightOf="@+id/chart_command_list"
+            android:background="@color/white"></FrameLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/whiteTwo"></View>
+
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            card_view:cardUseCompatPadding="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background"></View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/entities_overview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/title_OverView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <TextView
+                    android:id="@+id/entities_update_company_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/regular"
+                    android:maxLines="5"
+                    android:paddingLeft="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearShowDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/separator"></include>
+
+                    <TextView
+                        android:id="@+id/entities_showDetails"
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/title_Show_Details"
+                        android:textColor="@color/tealish"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            card_view:cardUseCompatPadding="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background"></View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/title_Statistics"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Currency_stock"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Currency_stock"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Exchange"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Exchange"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Trade_Date"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Trade_Date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Price_Earnings_Ratio"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Price_Earnings_Ratio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Years_High"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Years_High"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Years_Low"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Years_Low"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Dividend"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Dividend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Ex_Dividend_Date"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Ex_Dividend_Date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Volumn"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/title_Volumn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator"></include>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            card_view:cardUseCompatPadding="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background"></View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/title_Analyst_Price_Target"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Current_Price"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvCurrent_Price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:text="@string/title_Current_Price"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Average_Price_target"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvAverage_Price_target"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:text="@string/title_Average_Price_target"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Potential_Returns"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvtitle_Potential_Gain"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="right"
+                        android:text="@string/title_Potential_Returns"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPriceTargetDescription"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/regular"
+                    android:maxLines="5"
+                    android:text=""
+                    android:visibility="gone" />
+
+                <include layout="@layout/separator"></include>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            card_view:cardUseCompatPadding="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background"></View>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/title_Analysts_Recommendation"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_buy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center"
+                        android:text="47.8%"
+                        android:textColor="@color/greyBlue"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_hold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center"
+                        android:text="39.1%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_sell"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center"
+                        android:text="13.1%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="@string/title_Buy"
+                        android:textColor="@color/blueyGrey50"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="@string/title_Hold"
+                        android:textColor="@color/blueyGrey50"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:text="@string/title_Sell"
+                        android:textColor="@color/blueyGrey50"
+                        android:textSize="@dimen/text_size_14"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <include layout="@layout/separator"></include>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/linear_recommendedBy"
+            android:orientation="vertical">
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/background"></View>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/title_Recommended_by"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <include layout="@layout/separator_without_top_margin"></include>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_Recommended_by"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/white"
+                        android:fillViewport="true"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/background"></View>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entities_Title1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/title_Company_Fundamental_Information"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <include layout="@layout/separator_without_top_margin"></include>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/filter1_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/white"
+                        android:fillViewport="true"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearRelatedStocks"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/background"></View>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/title_Related_Stocks"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <include layout="@layout/separator_without_top_margin"></include>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_RelatedStocks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/white"
+                        android:fillViewport="true"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/linear_relatednews"
+            android:orientation="vertical">
+
+            <View xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/background"></View>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="43dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/title_Related_News"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <include layout="@layout/separator_without_top_margin"></include>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_RelatedNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/white"
+                        android:fillViewport="true"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+

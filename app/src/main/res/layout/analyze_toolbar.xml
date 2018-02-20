@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <com.figsinc.app.utils.CircularProgressBar
+            android:id="@+id/circular_progress_bar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cpb_background_progressbar_color="@color/whiteTwo"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progressbar_color="@color/tealish"
+            app:cpb_progressbar_width="5dp" />
+
+        <TextView
+            android:id="@+id/progress_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="7dp"
+            android:text="94%"
+            android:textColor="@color/tealish"
+            android:textSize="@dimen/text_size_14"
+            android:fontFamily="@font/semibold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:id="@+id/button_report"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/report_grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:id="@+id/button_infographic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/infographic_grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:id="@+id/button_video"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/video_grey"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:id="@+id/button_info"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/news_grey"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+
+</LinearLayout>

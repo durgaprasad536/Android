@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <com.figsinc.app.utils.ImageLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageViewmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        custom:image="@mipmap/dotted_map"
+        custom:imageHeight="640"
+        custom:imageWidth="1500">
+
+        <ImageView
+            android:id="@+id/marker_nasdaq"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            android:background="@mipmap/red_pin"
+            custom:layout_centerX="245"
+            custom:layout_centerY="190" />
+
+        <ImageView
+            android:id="@+id/marker_nyse"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/red_pin"
+            custom:layout_centerX="300"
+            custom:layout_centerY="170" />
+
+        <ImageView
+            android:id="@+id/marker_japan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/red_pin"
+            custom:layout_centerX="1140"
+            custom:layout_centerY="175" />
+
+
+        <ImageView
+            android:id="@+id/marker_taiwan"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/red_pin"
+            custom:layout_centerX="1120"
+            custom:layout_centerY="215" />
+
+        <ImageView
+            android:id="@+id/marker_HongKong"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/red_pin"
+            custom:layout_centerX="1070"
+            custom:layout_centerY="230" />
+
+        <ImageView
+            android:id="@+id/marker_singapore"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/red_pin"
+            custom:layout_centerX="1070"
+            custom:layout_centerY="270" />
+
+    </com.figsinc.app.utils.ImageLayout>
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/listSentiments"
+        android:name="com.figs.app.analyze.SentimentsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/white"
+        android:paddingBottom="50dp"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.figsinc.app.analyze.sentiments.SentimentsFragment" />
+
+
+</LinearLayout>

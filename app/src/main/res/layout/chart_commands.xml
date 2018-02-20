@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/chart_command_list"
+        android:layout_width="200dp"
+        android:background="@color/white"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone"
+        android:paddingTop="5dp" />
+
+    <FrameLayout
+        android:id="@+id/chartFrame"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="5dp"
+        android:layout_toRightOf="@+id/chart_command_list" >
+    </FrameLayout>
+
+</RelativeLayout>
+
+
+

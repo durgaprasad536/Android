@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.figsinc.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".FigsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:replace="android:label">
+        <activity
+            android:name=".onboarding.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- For ShortCuts -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- For ShortCuts -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:name=".login.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".login.SocialMediaActivity"
+            android:label="@string/action_Sign_Up"
+            android:theme="@style/SocialTheme" />
+        <activity
+            android:name=".login.SignUpActivity"
+            android:label="@string/action_Sign_Up"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/text_login"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".login.ForgotPasswordActivity"
+            android:label="@string/title_Forgot_Password"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".learn.LearnActivity"
+            android:label="@string/title_activity_learn"
+            android:theme="@style/MyMaterialTheme.Base" />
+        <activity
+            android:name=".learn.sector.SectorDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".learn.sector.VideoViewActivity"
+            android:label="@string/title_activity_videoView"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".learn.sector.PdfViewActivity"
+            android:label="@string/title_activity_pdfView"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".learn.filter.FilterActivity"
+            android:label="@string/title_activity_filter"
+            android:theme="@style/AppTheme" />
+
+        <!--
+            <activity
+            android:name=".analyse.AnalyseActivity"
+            android:label="@string/title_activity_filter"
+            android:theme="@style/AppTheme"></activity>
+        -->
+        <activity
+            android:name=".learn.news.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".calculator.CalculatorActivity"
+            android:label="@string/title_activity_calculator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".calculator.ResultsCalculatorActivity"
+            android:label="@string/title_activity_results_calculator"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".login.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".settings.PersonalInfoAcitivity"
+            android:label="@string/title_activity_personal_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".settings.LinkedAccountActivity"
+            android:label="@string/title_activity_linked_account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".settings.AccountPrivacyActivity"
+            android:label="@string/title_activity_account_privacy"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".settings.EmailNotificationActivity"
+            android:label="@string/title_activity_email_notification"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.AnalyzeActivity"
+            android:label="@string/title_activity_analyze"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- meta tag points to the activity which displays the results -->
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchResultsActivity" />
+        </activity>
+        <activity
+            android:name=".analyze.filter.AnalyseFilterActivity"
+            android:label="Filter"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".learn.theme.ThemeProfileActivity"
+            android:label="@string/title_activity_learn"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".onboarding.OnboardingActivity"
+            android:label="@string/title_activity_onboarding"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.trendingstocks.StockInfoActivity"
+            android:label="@string/title_activity_stock_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.trendingfunds.FundsInfoActivity"
+            android:label="@string/title_activity_stock_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.trendinganalysts.AnalystInfoActivity"
+            android:label="@string/title_activity_Analyst_Profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".collect.CollectActivity"
+            android:label="@string/title_activity_collect"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.trendingstocks.ValuationListViewBarChartActivity"
+            android:label="@string/title_activity_valuation"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".analyze.trendingstocks.EfficiencyListViewBarChartActivity"
+            android:label="@string/title_activity_Efficiency"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".analyze.trendingstocks.ProfitabilityListViewBarChartActivity"
+            android:label="@string/title_activity_profitability"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".analyze.trendingstocks.CapitalStructureListViewBarChartActivity"
+            android:label="@string/title_activity_Capital_Structure"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".analyze.trendingfunds.FundsBasicInfoActivity"
+            android:label="@string/title_activity_funds_detail_informations"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.trendingfunds.FundsManagementFeesActivity"
+            android:label="@string/title_activity_funds_management_fees"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.trendingfunds.FundsYearlyPerformanceActivity"
+            android:label="@string/title_activity_funds_yearly_performance"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.trendingfunds.FundsLipperScoreCardActivity"
+            android:label="@string/title_activity_funds_lipper_score_card"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".utils.CandleStickChartActivity"
+            android:label="@string/title_activity_funds_lipper_score_card"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".learn.news.NewsDetailActivity"
+            android:label="@string/title_activity_news_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".learn.sector.SectorDetailsSubActivity"
+            android:label="@string/title_activity_sector_details_sub"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".learn.theme.ThemeDetailsSubActivity"
+            android:label="@string/title_activity_sector_details_sub"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".utils.FigsPopupActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
+            android:name=".netdhania.MainProPatternsChartActivity"
+            android:configChanges="orientation|keyboard|screenSize"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".netdhania.ChartImageActivity"
+            android:configChanges="orientation|keyboard|screenSize" />
+        <activity
+            android:name=".settings.SubscriptionActivity"
+            android:label="@string/title_activity_Subscription"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".analyze.search.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchResultsActivity"
+            android:label="@string/title_activity_search_results"
+            android:parentActivityName=".analyze.AnalyzeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".analyze.AnalyzeActivity" />
+            <!-- meta tag and intent filter go into results activity -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".analyze.sentiments.SentimentsDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".settings.SupportCenterActivity"
+            android:label="@string/title_activity_support_center"
+            android:theme="@style/ZendeskSdkTheme" />
+        <activity
+            android:name="com.zendesk.sdk.support.SupportActivity"
+            android:parentActivityName=".settings.SettingsActivity"
+            android:theme="@style/ZendeskSdkTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".login.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.zendesk.sdk.feedback.ui.ContactZendeskActivity"
+            android:theme="@style/ZendeskSdkTheme" />
+        <activity
+            android:name="com.zendesk.sdk.support.ViewArticleActivity"
+            android:theme="@style/ZendeskSdkTheme" />
+        <activity
+            android:name="com.zendesk.sdk.requests.RequestActivity"
+            android:theme="@style/ZendeskSdkTheme" />
+        <activity
+            android:name="com.zendesk.sdk.requests.ViewRequestActivity"
+            android:theme="@style/ZendeskSdkTheme" />
+        <activity
+            android:name=".login.WebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.GooglePlusActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".login.SignUponFIGSJapanActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".settings.CountryActivity"
+            android:label="@string/title_activity_country"
+            android:theme="@style/AppTheme">
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

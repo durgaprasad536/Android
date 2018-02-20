@@ -1,0 +1,211 @@
+<chartconf vers="1.2">
+    <plots>
+        <csp ft="grad" vis="true" sw="0.5" bw="10" stk="FFFFFFFF" ucfl="00FF00FF" dcfl="FF0000FF"/>
+        <lnp vis="true" sw="1" ls="solid">
+            <stks>
+                <clr rgba="FFFFFFFF"/>
+            </stks>
+            <syms>
+                <sym tp="circle" ft="color" vis="false" stk="FFFFFFFF" cfl="FFFFFFFF" w="5" h="5"/>
+            </syms>
+        </lnp>
+        <ohlcp vis="true" sw="2" cstk="FFFFFFFF" ustk="00FF00FF" dstk="FF0000FF" ostk="FFFFFFFF"/>
+        <hlcp vis="true" sw="1" cstk="FFFFFFFF" ustk="FFFFFFFF" dstk="FFFFFFFF"/>
+        <arp ft="color" vis="true">
+            <cfls>
+                <clr rgba="00FF00FF"/>
+            </cfls>
+        </arp>
+        <barp ft="color" vis="true" sw="0" bw="0.5">
+            <cfls>
+                <clr rgba="00FF00FF"/>
+            </cfls>
+        </barp>
+        <patp ft="color" vis="true" sw="1.5" stk="FF1919FF" cfl="FFD71977"/>
+    </plots>
+    <its>
+        <st cd="AO">
+            <stl>
+                <barp ref="main">
+                    <cfls>
+                        <clr nam="Down trend" rgba="FF0000FF"/>
+                        <clr nam="Up trend" rgba="00FF00FF"/>
+                    </cfls>
+                </barp>
+            </stl>
+        </st>
+        <st cd="BB">
+            <stl>
+                <arp ref="bollArea">
+                    <cfls>
+                        <clr nam="Area" rgba="7B7B7BFF"/>
+                    </cfls>
+                </arp>
+                <lnp ref="bollUp">
+                    <stks>
+                        <clr rgba="D59E29FF"/>
+                    </stks>
+                </lnp>
+                <lnp ref="bollDown">
+                    <stks>
+                        <clr rgba="D7A334FF"/>
+                    </stks>
+                </lnp>
+            </stl>
+        </st>
+        <st cd="CANDLESTICK">
+            <stl>
+                <patp ref="main"/>
+            </stl>
+        </st>
+        <st cd="EWO">
+            <stl>
+                <barp ref="main|zero">
+                    <cfls>
+                        <clr nam="Down color" rgba="FF0000FF"/>
+                        <clr nam="Up color" rgba="00FF00FF"/>
+                    </cfls>
+                </barp>
+            </stl>
+        </st>
+        <st cd="ICHIMOKU">
+            <stl>
+                <arp ref="kumo">
+                    <cfls>
+                        <clr nam="Kumo Down" rgba="FF0000FF"/>
+                        <clr nam="Kumo Up" rgba="00FF00FF"/>
+                    </cfls>
+                </arp>
+            </stl>
+        </st>
+        <st cd="PIVOTPOINT">
+            <stl>
+                <lnp ref="r2">
+                    <stks>
+                        <clr rgba="FFD719FF"/>
+                    </stks>
+                </lnp>
+                <lnp ref="pivot">
+                    <stks>
+                        <clr rgba="F7B767FF"/>
+                    </stks>
+                </lnp>
+                <lnp ref="s2">
+                    <stks>
+                        <clr rgba="59C042FF"/>
+                    </stks>
+                </lnp>
+                <arp ref="r1|s1">
+                    <cfls>
+                        <clr nam="R1 - S1" rgba="666861FF"/>
+                    </cfls>
+                </arp>
+            </stl>
+        </st>
+        <st cd="RSI">
+            <stl>
+                <arp ref="main|overbought">
+                    <cfls>
+                        <clr nam="RSI - OverBought" rgba="FFC436AA"/>
+                    </cfls>
+                </arp>
+                <arp ref="oversold|main">
+                    <cfls>
+                        <clr nam="Oversold - RSI" rgba="9B4FFFAA"/>
+                    </cfls>
+                </arp>
+                <lnp ref="oversold" ls="dotted">
+                    <stks>
+                        <clr rgba="9B4FFFFF"/>
+                    </stks>
+                </lnp>
+                <lnp ref="overbought" ls="dotted">
+                    <stks>
+                        <clr rgba="FFC436FF"/>
+                    </stks>
+                </lnp>
+            </stl>
+        </st>
+        <st cd="SMA">
+            <stl>
+                <lnp ref="main">
+                    <stks>
+                        <clr rgba="FFCC61FF"/>
+                    </stks>
+                </lnp>
+            </stl>
+        </st>
+        <st cd="SRSI">
+            <stl>
+                <arp ref="overbought|oversold">
+                    <cfls>
+                        <clr nam="Overbought - Oversold" rgba="FFC436AA"/>
+                    </cfls>
+                </arp>
+                <lnp ref="oversold" ls="dotted">
+                    <stks>
+                        <clr rgba="9B4FFFFF"/>
+                    </stks>
+                </lnp>
+                <lnp ref="overbought" ls="dotted">
+                    <stks>
+                        <clr rgba="FFC436FF"/>
+                    </stks>
+                </lnp>
+            </stl>
+        </st>
+        <st cd="SUPERTREND">
+            <stl>
+                <lnp ref="superTrend">
+                    <syms>
+                        <sym tp="circle" vis="true" stk="FF0000FF" cfl="FF0000FF" w="4" h="4" nam="Down trend"/>
+                        <sym tp="circle" vis="true" stk="00FF00FF" cfl="00FF00FF" w="4" h="4" nam="Up trend"/>
+                    </syms>
+                </lnp>
+            </stl>
+        </st>
+        <st cd="MACD">
+            <stl>
+                <barp ref="histogram|zero">
+                    <cfls>
+                        <clr nam="Histogram -" rgba="FF0000FF"/>
+                        <clr nam="Histogram +" rgba="00FF00FF"/>
+                    </cfls>
+                </barp>
+            </stl>
+        </st>
+        <tln tp="close">
+            <lnp stk="FF8000FF"/>
+        </tln>
+        <hln tp="horClose">
+            <lnp stk="FF8000FF"/>
+        </hln>
+        <fbln tp="retracements">
+            <tln tp="close">
+                <lnp stk="FF8000FF"/>
+            </tln>
+            <lnp stk="5797FFFF"/>
+        </fbln>
+        <fbln tp="fans">
+            <tln tp="close">
+                <lnp stk="FF8000FF"/>
+            </tln>
+            <lnp stk="5797FFFF"/>
+        </fbln>
+        <fbln tp="extensions">
+            <tln tp="close">
+                <lnp stk="FF8000FF"/>
+            </tln>
+            <lnp stk="5797FFFF"/>
+        </fbln>
+        <fbln tp="arcs">
+            <tln tp="close">
+                <lnp stk="FF8000FF"/>
+            </tln>
+            <lnp stk="5797FFFF"/>
+        </fbln>
+        <fbln tp="timezones">
+            <lnp stk="5797FFFF"/>
+        </fbln>
+    </its>
+</chartconf>

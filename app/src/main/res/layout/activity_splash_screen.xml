@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/bkg_splash"
+    tools:context="com.figsinc.app.onboarding.SplashScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/logo_white" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/splash_slogan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/text_no_internet"
+        android:visibility="gone"
+        android:background="#323232"
+        android:textSize="14sp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="23dp"
+        android:paddingBottom="17dp"
+        android:fontFamily="@font/regular"
+        android:textStyle="normal"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="6sp"
+        android:text="No Connection. Turn on cellular data or use Wi-Fi \n to access data."
+        />
+
+</RelativeLayout>

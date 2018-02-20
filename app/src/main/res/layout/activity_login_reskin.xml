@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical" android:background="@color/white">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/textInputLastName">
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:hint="@string/title_Email_Address"
+                android:fontFamily="@font/regular"
+                android:inputType="textEmailAddress"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:hint="@string/title_Password"
+
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+        <Button
+            android:id="@+id/buttonLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textInputPassword"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/selector_submit_btn"
+            android:text="@string/button_submit"
+            android:inputType="text"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/signup_email" />
+
+        <TextView
+            android:id="@+id/textView_ForgetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/bold"
+            android:text="@string/title_Forgot_Password"
+            android:textColor="@color/darkish_blue"
+            android:textSize="@dimen/signin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="0.5dp" android:background="@color/whiteTwo" />
+
+        <TextView
+            android:text="Or Login with"
+            android:textColor="@color/greyBlue"
+            android:padding="10dp" android:layout_centerInParent="true"
+            android:background="@color/background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/fabric_button_signupWithTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/azure"
+            android:drawableLeft="@drawable/twitter"
+            android:drawableStart="@drawable/twitter"
+            android:paddingEnd="20dp"
+            android:visibility="gone"
+            android:paddingStart="20dp"
+            android:text="Twitter"
+            android:inputType="text"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/signup_email"
+            />
+
+        <Button
+            android:id="@+id/button_signupWithTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/azure"
+            android:drawableLeft="@drawable/twitter"
+            android:drawableStart="@drawable/twitter"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:text="Twitter"
+            android:inputType="text"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/signup_email"
+            />
+
+        <Button xmlns:facebook="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/button_signupWithFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/denimBlue"
+            android:drawableLeft="@drawable/facebook"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:text="Facebook"
+            android:inputType="text"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/signup_email"
+            />
+
+        <Button
+            android:id="@+id/button_signupWithGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/paleRed"
+            android:text="Google"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:drawableLeft="@mipmap/google_white"
+            android:inputType="text"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/signup_email"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

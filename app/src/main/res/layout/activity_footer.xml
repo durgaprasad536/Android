@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom"
+        android:background="@mipmap/footertry"
+        android:clickable="true"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearAnalyze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingStart="20dp">
+
+            <ImageView
+                android:id="@+id/imageViewAnalyse"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/analyse_grey"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Analyse"
+                android:id="@+id/textAnalyze"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/cloudyBlue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLearn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewLearn"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/learn_grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="Learn"
+                android:id="@+id/textLearn"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/cloudyBlue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/learn_grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="Learn"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/cloudyBlue" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearCollect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewCollect"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentTop="true"
+                android:background="@mipmap/bookmark_grey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="Collect"
+                android:id="@+id/textCollect"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/cloudyBlue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewFeed"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@mipmap/setting_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="Settings"
+                android:id="@+id/textFeed"
+                android:fontFamily="@font/semibold"
+                android:textColor="@color/cloudyBlue" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/linearLearn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+       <!-- <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menu_blue"
+            android:layout_width="28dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:backgroundTint="@android:color/white"
+            app:borderWidth="0dp"
+            app:elevation="0dp"
+            app:menu_icon="@mipmap/figs_grey"
+            fab:menu_colorNormal="@android:color/white"
+            fab:menu_colorPressed="#2272CD"
+            fab:menu_colorRipple="#62B2FF"
+            fab:menu_fab_size="mini">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab14"
+                style="@style/MenuButtonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sentiment_grey" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab24"
+                style="@style/MenuButtonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/watchlist_grey" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab34"
+                style="@style/MenuButtonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/calculator_normal" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+-->
+
+         <ImageView
+             android:id="@+id/imageViewFigs"
+             android:layout_width="28dp"
+             android:layout_height="40dp"
+             android:layout_centerInParent="true"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:background="@mipmap/figs_grey" />
+
+    </RelativeLayout>
+</RelativeLayout>
+

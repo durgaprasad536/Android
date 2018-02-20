@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkish_blue"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/darkish_blue"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/darkish_blue"
+                android:backgroundTint="@color/darkish_blue"
+                app:layout_anchorGravity="center"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Sentiments"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.Toolbar>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:focusableInTouchMode="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.figsinc.app.analyze.trendingfunds.FundsInfoActivity"
+        tools:showIn="@layout/activity_funds_info">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.figsinc.app.utils.ImageLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:image="@mipmap/dotted_map"
+                    custom:imageHeight="640"
+                    custom:imageWidth="1500">
+
+                    <ImageView
+                        android:id="@+id/marker_nasdaq"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/red_pin"
+                        custom:layout_centerX="300"
+                        custom:layout_centerY="170" />
+
+                    <ImageView
+                        android:id="@+id/marker_nyse"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/red_pin"
+                        custom:layout_centerX="300"
+                        custom:layout_centerY="170" />
+
+                    <ImageView
+                        android:id="@+id/marker_japan"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/red_pin"
+                        custom:layout_centerX="1140"
+                        custom:layout_centerY="175" />
+
+
+                    <ImageView
+                        android:id="@+id/marker_taiwan"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/red_pin"
+                        custom:layout_centerX="1120"
+                        custom:layout_centerY="215" />
+
+                    <ImageView
+                        android:id="@+id/marker_HongKong"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/red_pin"
+                        custom:layout_centerX="1070"
+                        custom:layout_centerY="230" />
+
+                    <ImageView
+                        android:id="@+id/marker_singapore"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@mipmap/red_pin"
+                        custom:layout_centerX="1070"
+                        custom:layout_centerY="270" />
+
+
+                    <LinearLayout
+                        custom:layout_centerX="800"
+                        custom:layout_centerY="540"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageFlagHK"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/hongkong"
+                            android:gravity="center|left" />
+
+                        <ImageView
+                            android:id="@+id/imageFlagJapan"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/japan"
+                            android:gravity="center|left" />
+
+                        <ImageView
+                            android:id="@+id/imageFlagSing"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/singapore"
+                            android:gravity="center|left" />
+
+                        <ImageView
+                            android:id="@+id/imageFlagTw"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/taiwan"
+                            android:gravity="center|left" />
+
+                        <ImageView
+                            android:id="@+id/imageFlagUs"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/us"
+                            android:gravity="center|left" />
+
+                    </LinearLayout>
+
+                </com.figsinc.app.utils.ImageLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageFlag"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@mipmap/japan"
+                        android:gravity="center|left" />
+
+                    <TextView
+                        android:id="@+id/entities_Country"
+                        android:layout_width="0dp"
+                        android:layout_height="43dp"
+                        android:layout_weight=".75"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="Japan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button_percent"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="7dp"
+                        android:background="@color/lightblue"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:text="60.00%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16" />
+                </LinearLayout>
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:id="@+id/linearUnitedSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="2dp"
+                    android:background="@drawable/selector_sentiments_unitedstates"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/buttonNASDAQ"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@color/darkish_blue"
+                        android:gravity="center"
+                        android:text="NASDAQ"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/buttonNYSE"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="NYSE" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_new_map"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="7dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/regular"
+                            android:text=""
+                            android:visibility="invisible" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_three_month"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/month_3m"
+                            android:textColor="@color/blueyGreyThree" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_six_month"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/month_6m"
+                            android:textColor="@color/blueyGreyThree" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_nine_month"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/month_9m"
+                            android:textColor="@color/blueyGreyThree" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_twelve_month"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/regular"
+                            android:text="@string/month_12m"
+                            android:textColor="@color/blueyGreyThree" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="7dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/regular"
+                            android:text="Potential Returns" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_three_month_preturn"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="3M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_six_month_preturn"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="6M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_nine_month_preturn"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="9M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_twelve_month_preturn"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="12M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="7dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/regular"
+                            android:text="Potential Losses" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_three_month_ploss"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="3M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_six_month_ploss"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="6M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_nine_month_ploss"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="9M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_twelve_month_ploss"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="12M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="7dp">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/regular"
+                            android:text="Return/Losses Ratio" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_three_month_rlr"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="3M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_six_month_rlr"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="6M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_nine_month_rlr"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="9M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_twelve_month_rlr"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/bold"
+                            android:text="12M"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="0dp"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="7dp"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_date1"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center_horizontal"
+                            android:text="@string/date"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_date2"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center_horizontal"
+                            android:text="@string/date"
+                            android:textColor="@color/blueyGreyThree" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_date3"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center_horizontal"
+                            android:text="@string/date"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/text_date4"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/regular"
+                            android:gravity="center_horizontal"
+                            android:text="@string/date"
+                            android:textColor="@color/blueyGreyThree"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

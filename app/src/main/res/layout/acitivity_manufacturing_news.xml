@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/entities_overview"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:text="Top News"
+        android:fontFamily="@font/regular"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/black" />
+
+    <include layout="@layout/separator"></include>
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        card_view:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                  />
+
+            <TextView
+                android:id="@+id/entities_news_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/semibold"
+                android:text="Too good to be true: How we fell for the fake Sicilian villa and paid £4,000 to fraudsters"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/entities_news_published_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/regular"
+                android:text="Published 1 Aug 2017"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/greyBlue" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

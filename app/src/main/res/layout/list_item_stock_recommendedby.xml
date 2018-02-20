@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:id="@+id/linear_item"
+    android:layout_marginStart="10dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/tv_analyst_name"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/semibold"
+        android:gravity="center|start"
+        android:text="@string/title_Hold"
+        android:textColor="@color/black_three"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="normal" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:id="@+id/tv_analyst_companyname"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/regular"
+        android:gravity="center|start"
+        android:lineSpacingExtra="6sp"
+        android:text="@string/title_Hold"
+        android:textColor="@color/grey_blue"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="normal" />
+
+</LinearLayout>

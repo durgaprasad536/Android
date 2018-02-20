@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_linear"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:minHeight="@dimen/ad_item_spacing_8"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/linear_item"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Personal Info"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/profile_item_name_textSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_title"
+            android:layout_marginEnd="@dimen/ad_item_spacing_4"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="First name, last name, email address, etc."
+            android:textAlignment="viewStart" />
+
+        <Switch
+            android:id="@+id/Switch_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/linear_item"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <Spinner
+            android:id="@+id/spinner_Select"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:entries="@array/countries_array" />
+
+        <ImageView
+            android:id="@+id/profile_navigator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/arrow_right"
+            android:contentDescription="@string/messenger_cd_right_arrow_description" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

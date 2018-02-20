@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/entities_overview"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center|left"
+        android:fontFamily="@font/regular"
+        android:paddingLeft="10dp"
+        android:background="@color/white"
+        android:text="@string/entities_trending_stocks_header"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whiteTwo"></View>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical" android:gravity="center">
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/listTrendingStocks"
+        android:background="@color/white"
+        android:name="com.figs.app.analyze.trendingfunds.TrendingFundsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_marginBottom="50dp"
+        tools:context="com.figsinc.app.analyze.trendingfunds.TrendingFundsFragment"
+        tools:listitem="@layout/list_item_analyse_trending_stocks" />
+    <TextView
+        android:id="@+id/emptyView"
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:text="No Records found!"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</LinearLayout>

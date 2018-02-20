@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "358455202449",
+    "project_id": "figs-189218"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358455202449:android:8aa71174ceda6fca",
+        "android_client_info": {
+          "package_name": "com.figsinc.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358455202449-hfoa6k7jiio2me3a0tjlckt0q0ph89s1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.figsinc.app",
+            "certificate_hash": "ee29a2e71962936ac82bf3fdbf08492f418e8792"
+          }
+        },
+        {
+          "client_id": "358455202449-7up5qaqof29q5gdqv4256i6irtqpmssa.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "358455202449-hju7ssiv884m7fc0kb69v8or8kurk9n7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.figsinc.app",
+            "certificate_hash": "2c5ee75425d996fa623b714cfa9694f571b07a74"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbqP-W_aFcXDnnpUBN43GBU_f1Gl1czkM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

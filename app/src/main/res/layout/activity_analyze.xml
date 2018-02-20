@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkish_blue"
+    tools:context="com.figsinc.app.analyze.AnalyzeActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_tab_layout_height"
+            android:background="@color/darkish_blue"
+            android:textAlignment="center"
+            app:tabMode="scrollable"
+            app:fontFamily="@font/bold"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="3dp"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/blueyGreyThree"
+            app:tabGravity="fill"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+ <!--   app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include layout="@layout/activity_footer"></include>
+
+    <Spinner
+        android:id="@+id/popupSpinner"
+        android:spinnerMode="dialog"
+        android:visibility="gone"
+        android:entries="@array/analyze_regions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</android.support.design.widget.CoordinatorLayout>

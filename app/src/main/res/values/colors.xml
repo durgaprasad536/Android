@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0034a3</color> //darkishBlue
+    <color name="colorPrimaryDark">#0034a3</color>//darkishBlue
+    <color name="colorAccent">#0034a3</color>//darkishBlue
+
+    <color name="blue">#012091</color>
+    <color name="black_87">#dd000000</color>
+    <color name="black_38">#60000000</color>
+    <color name="black">#211e1e</color>
+    <color name="cobalt">#2152a0</color>
+    <color name="white">#ffffff</color>
+    <color name="lightblue">#5ec0ee</color>
+    <color name="blue_gray">#8795aa</color>
+    <color name="azure">#1da1f2</color>
+    <color name="denimBlue">#3b5998</color>
+    <color name="paleRed">#db4437</color>
+    <color name="tealish">#2ed4c5</color>
+    <color name="blueyGreyTwo">#8896ac</color>
+    <color name="blueyGreyThree">#8896ab</color>
+    <color name="whiteTwo">#dfdfdf</color>
+    <color name="list_background">#D3D3D3</color>
+    <color name="greyBlue">#606e85</color>
+    <color name="ad_white_solid">#ffffffff</color>
+    <color name="ad_gray_light">#ffedf0f3</color>
+    <color name="greenBlue">#04cf80</color>
+    <color name="aqua_green">#16db93</color>
+    <color name="cloudyBlue">#c3cad5</color>
+    <color name="iris">#7b5cc3</color>
+    <color name="blueyGrey50">#8896ab</color>
+    <color name="background">#f3f5f9</color>
+    <color name="brightBlue">#0076ff</color>
+    <color name="purpleyGrey">#8f8e94</color>
+    <color name="greenBlueTwo">#00c276</color>
+    <color name="rouge">#c91518</color>
+    <color name="whiteThree">#d8d8d8</color>
+    <color name="blueyGreyFour">#8896ac</color>
+    <color name="transparentStatus">#30000000</color>
+    <color name="darkish_blue">#0034a3</color>
+    <color name="onboarding_unselect">#19ffffff</color>
+    <color name="onboarding_sky_blue">#74a0ff</color>
+    <color name="disabed_basic">#211e1e</color>
+    <color name="analyze_sentiments_non_selected_text">#b2ffffff</color>
+    <color name="teal">#009688</color>
+    <color name="black_two">#010101</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_three">#211e1e</color>
+    <color name="grey_blue">#606e85</color>
+    <color name="paleGrey">#f3f5f9</color>
+    <color name="signin_disable">#91A8D7</color>
+    <color name="dark_sky_blue">#346ce2</color>
+    <color name="reddish_pink">#fd315b</color>
+
+
+   <!-- <color name="tealish">#2ed4c5</color>-->
+   <!-- <color name="iris">#7b5cc3</color>-->
+
+</resources>

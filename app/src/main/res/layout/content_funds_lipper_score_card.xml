@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="@string/title_Lipper_Leaders_Scorecard"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/black" />
+
+                <include layout="@layout/separator_without_top_margin"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/regular"
+                        android:text=""
+                        android:visibility="invisible" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_three_month"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/title_Overall"
+                        android:textColor="@color/black" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_six_month"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/title_3Years"
+                        android:textColor="@color/black" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_nine_month"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/title_5Years"
+                        android:textColor="@color/black" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_twelve_month"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/semibold"
+                        android:gravity="center_horizontal"
+                        android:text="@string/title_10Years"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Total_Return" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_overAll_Treturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center_horizontal"
+                        android:text="@string/title_Overall"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_three_year_Treturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="3y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_five_year_Treturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="5Y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_ten_year_Treturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="10Y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Consistent_Return" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_overall_Creturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/title_Overall"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_three_year_Creturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="3Y"
+                        android:textColor="@color/blueyGreyThree"
+                        card_view:textAllCaps="false" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_five_year_Creturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="5Y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_ten_year_Creturn"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="10Y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_layout_height"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="7dp">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="4"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/title_Preservation" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_overall_preservation"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="@string/title_Overall"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_three_year_preservation"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="3Y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_five_year_preservation"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="5Y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_ten_year_preservation"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_horizontal"
+                        android:text="10Y"
+                        android:textColor="@color/blueyGreyThree" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

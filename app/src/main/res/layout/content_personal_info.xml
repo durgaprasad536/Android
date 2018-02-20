@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.figsinc.app.settings.PersonalInfoAcitivity"
+    tools:showIn="@layout/activity_personal_info">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_photoChange"
+            android:background="@color/white"
+            android:minHeight="@dimen/ad_item_spacing_8"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/ad_entity_photo_3"
+                android:layout_height="@dimen/ad_entity_photo_3"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/ad_item_spacing_2"
+                android:background="@drawable/male_07"
+                android:contentDescription="@string/messenger_cd_profile_pic_description" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/ad_item_spacing_2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="@dimen/ad_item_spacing_2"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Change Profile Picture"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/profile_item_name_textSize" />
+
+               <!-- <TextView
+                    android:id="@+id/profile_headline"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/ad_item_spacing_4"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="Singapore, Singapore"
+                    android:textAlignment="viewStart" />-->
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/entities_Name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:text="@string/entities_Name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+                <View xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/whiteTwo"
+                    android:paddingLeft="10dp"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_FirstName"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_LastName"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/textInputFirstName"
+                        android:text="@string/entities_FirstName"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_LastName"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/textInputLastName"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            card_view:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/entities_Details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    android:text="@string/entities_Details"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+                <View xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/whiteTwo"
+                    android:paddingLeft="10dp"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/entities_Email_Address"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/entities_dummy_email"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/textInputEmailAddress"
+                        android:textColor="@color/black" />
+
+                    <View xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/whiteTwo"
+                        android:paddingLeft="10dp"></View>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/entities_Gender"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner_gender"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/regular"
+                        android:entries="@array/gender"
+                        android:background="@color/white"
+                        android:textColor="@color/black" />
+
+                    <View xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/whiteTwo"
+                        android:paddingLeft="10dp"></View>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_Country"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_City"
+                        android:visibility="gone"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/spinnerCountry"
+                        android:background="#FFFFFFFF"
+                        android:layout_width="0dp"
+                        android:spinnerMode="dialog"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:fontFamily="@font/regular"
+                        android:entries="@array/countries_array"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        android:visibility="gone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_LastName"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <View xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/whiteTwo"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_Date_of_Birth"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_Mobile_Number"
+                        android:textColor="@color/blueyGreyTwo" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/tvDateOfBirth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_Enter_your_birthday"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tvMobileNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/entities_dummy_mobile"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

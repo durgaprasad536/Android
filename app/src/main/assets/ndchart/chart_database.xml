@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chartconf vers="1.2" df="true">
+   <its>
+      <ct cd="CHART" fld="b" nam="Candlestick">
+         <stl>
+            <csp ref="opens|highs|lows|closes" />
+         </stl>
+      </ct>
+      <ct cd="CHART" fld="b" nam="OHLC Chart">
+         <stl>
+            <ohlcp ref="opens|highs|lows|closes" />
+         </stl>
+      </ct>
+      <ct cd="CHART" fld="b" nam="Line Chart">
+         <stl>
+            <lnp ref="closes" />
+         </stl>
+      </ct>
+      <ct cd="CHART" fld="b" nam="Line Dot Chart">
+         <stl>
+            <lnp ref="closes">
+               <syms>
+                  <sym vis="true" />
+               </syms>
+            </lnp>
+         </stl>
+      </ct>
+      <ct cd="CHART" fld="b" nam="HLC Chart">
+         <stl>
+            <hlcp ref="highs|lows|closes" />
+         </stl>
+      </ct>
+      <ct cd="HA" fld="b" nam="Heikin-Ashi">
+         <stl>
+            <csp ref="opens|highs|lows|closes" />
+         </stl>
+      </ct>
+      <st cd="AD" />
+      <st cd="ADL" />
+      <st cd="ADR" />
+      <st cd="ALIGATOR" />
+      <st cd="ALMA" />
+      <st cd="AROON" />
+      <st cd="ADX" />
+      <st cd="ADXR" />
+      <st cd="ATR" />
+      <st cd="AO" />
+      <st cd="BOP" />
+      <st cd="BB" />
+      <st cd="BBPB" />
+      <st cd="BBW" />
+      <st cd="CANDLESTICK" />
+      <st cd="CMF" />
+      <st cd="CO" />
+      <st cd="CMO" />
+      <st cd="CCI" />
+      <st cd="COP" />
+      <st cd="DEMARKER" />
+      <st cd="DPO" />
+      <st cd="DMI" />
+      <st cd="DMA" />
+      <st cd="DONCH" />
+      <st cd="DEMA" />
+      <st cd="EOM" />
+      <st cd="EFT" />
+      <st cd="EFI" />
+      <st cd="EWO" />
+      <st cd="ETB" />
+      <st cd="EMA" />
+      <st cd="FIBB" />
+      <st cd="FRAMA" />
+      <st cd="ICHIMOKU" />
+      <st cd="KRI" />
+      <st cd="KC" />
+      <st cd="KST" />
+      <st cd="LRI" />
+      <st cd="MPR" />
+      <st cd="MMA" />
+      <st cd="MOM" />
+      <st cd="MFI" />
+      <st cd="MACD" />
+      <st cd="OBV" />
+      <st cd="SAR" />
+      <st cd="PCT_CHANGE" />
+      <st cd="PIVOTPOINT" />
+      <st cd="PPMA" />
+      <st cd="PRICECHANNEL" />
+      <st cd="OSC" />
+      <st cd="ROC" />
+      <st cd="RSI">
+         <cts>
+            <ct ocd="oversold" nam="Oversold" val="30" vis="true" edt="true" min="0" max="100" step="1" />
+            <ct ocd="overbought" nam="Overbought" val="70" vis="true" edt="true" min="0" max="100" step="1" />
+         </cts>
+      </st>
+      <st cd="SMA">
+         <ps>
+            <int cd="period" val="50" />
+         </ps>
+      </st>
+      <st cd="PKF" />
+      <st cd="FULL" />
+      <st cd="SMI" />
+      <st cd="SRSI">
+         <cts>
+            <ct ocd="oversold" nam="Oversold" val="30" vis="true" edt="true" min="0" max="100" step="1" />
+            <ct ocd="overbought" nam="Overbought" val="70" vis="true" edt="true" min="0" max="100" step="1" />
+         </cts>
+      </st>
+      <st cd="PKS" />
+      <st cd="SUPERTREND" />
+      <st cd="SI" />
+      <st cd="TSF" />
+      <st cd="TMA" />
+      <st cd="TRIX" />
+      <st cd="HLC3" />
+      <st cd="UO" />
+      <st cd="VOL" />
+      <st cd="VORTEX" />
+      <st cd="WMA" />
+      <st cd="WSMA" />
+      <st cd="WILLIAMSR" />
+      <st cd="ZIGZAG" />
+      <tln tp="close" />
+      <hln tp="horClose" />
+      <fbln tp="retracements" expl="true" expr="true" shv="true" shp="true">
+         <tln tp="close" />
+         <pcts>
+            <p val="23.6" vis="false" />
+            <p val="38.2" vis="true" />
+            <p val="50" vis="true" />
+            <p val="61.8" vis="true" />
+            <p val="78.6" vis="false" />
+            <p val="100" vis="false" />
+            <p val="127.2" vis="false" />
+            <p val="138.2" vis="false" />
+            <p val="161.8" vis="false" />
+            <p val="261.8" vis="false" />
+            <p val="361.8" vis="false" />
+            <p val="423.6" vis="false" />
+         </pcts>
+      </fbln>
+      <fbln tp="fans" expl="true" expr="true" shv="true" shp="true">
+         <tln tp="close" />
+         <pcts>
+            <p val="23.6" vis="false" />
+            <p val="38.2" vis="true" />
+            <p val="50" vis="true" />
+            <p val="61.8" vis="true" />
+            <p val="78.6" vis="false" />
+            <p val="100" vis="false" />
+            <p val="127.2" vis="false" />
+            <p val="138.2" vis="false" />
+            <p val="161.8" vis="false" />
+            <p val="261.8" vis="false" />
+            <p val="361.8" vis="false" />
+            <p val="423.6" vis="false" />
+         </pcts>
+      </fbln>
+      <fbln tp="extensions" expl="true" expr="true" shv="true" shp="true">
+         <tln tp="close" />
+         <pcts>
+            <p val="23.6" vis="false" />
+            <p val="38.2" vis="false" />
+            <p val="50" vis="false" />
+            <p val="61.8" vis="true" />
+            <p val="78.6" vis="false" />
+            <p val="100" vis="true" />
+            <p val="127.2" vis="false" />
+            <p val="138.2" vis="true" />
+            <p val="161.8" vis="true" />
+            <p val="261.8" vis="true" />
+            <p val="361.8" vis="false" />
+            <p val="423.6" vis="true" />
+         </pcts>
+      </fbln>
+      <fbln tp="arcs" expl="false" expr="false" shv="false" shp="true">
+         <tln tp="close" />
+         <pcts>
+            <p val="23.6" vis="false" />
+            <p val="38.2" vis="true" />
+            <p val="50" vis="true" />
+            <p val="61.8" vis="true" />
+            <p val="78.6" vis="false" />
+            <p val="100" vis="false" />
+            <p val="127.2" vis="false" />
+            <p val="138.2" vis="false" />
+            <p val="161.8" vis="false" />
+            <p val="261.8" vis="false" />
+            <p val="361.8" vis="false" />
+            <p val="423.6" vis="false" />
+         </pcts>
+      </fbln>
+      <fbln tp="timezones" expl="false" expr="false" shv="false" shp="false" />
+   </its>
+   <df>
+      <!--
+        any|currency|index|stock|loser|winner|bond|fund|future|option|warrant|forward
+-->
+      <instr val="any|index|stock|loser|winner|bond|fund|future|option|warrant">
+         <chart ts="86400" period="100">
+            <its>
+               <ct id="0" cd="CHART">
+                  <stl>
+                     <lnp ref="closes" />
+                  </stl>
+               </ct>
+            </its>
+            <lay>
+               <view h="1">
+                  <it ref="0" />
+               </view>
+            </lay>
+         </chart>
+      </instr>
+      <instr val="currency|forward">
+         <chart ts="3600" period="100">
+            <its>
+               <ct id="0" cd="CHART">
+                  <stl>
+                     <csp ref="opens|highs|lows|closes" />
+                  </stl>
+               </ct>
+            </its>
+            <lay>
+               <view h="1">
+                  <it ref="0" />
+               </view>
+            </lay>
+         </chart>
+      </instr>
+   </df>
+</chartconf>

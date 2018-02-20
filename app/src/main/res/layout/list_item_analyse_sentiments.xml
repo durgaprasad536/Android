@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    card_view:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_item"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageFlag"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@mipmap/japan"
+                android:gravity="center|left" />
+
+            <TextView
+                android:id="@+id/entities_Country"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_weight=".75"
+                android:fontFamily="@font/semibold"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Japan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/button_percent"
+                android:layout_width="60dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="7dp"
+                android:background="@color/lightblue"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="60.00%"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <include layout="@layout/separator_without_top_margin"></include>
+
+        <LinearLayout
+            android:id="@+id/linear_new_map"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/regular"
+                    android:text=""
+                    android:visibility="invisible" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_three_month"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/month_3m"
+                    android:textColor="@color/blueyGreyThree" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_six_month"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/month_6m"
+                    android:textColor="@color/blueyGreyThree" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_nine_month"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/month_9m"
+                    android:textColor="@color/blueyGreyThree" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_twelve_month"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/month_12m"
+                    android:textColor="@color/blueyGreyThree" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/regular"
+                    android:text="Potential Returns" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_three_month_preturn"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="3M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_six_month_preturn"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="6M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_nine_month_preturn"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="9M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_twelve_month_preturn"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="12M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/regular"
+                    android:text="Potential Losses" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_three_month_ploss"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="3M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_six_month_ploss"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="6M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_nine_month_ploss"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="9M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_twelve_month_ploss"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="12M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/regular"
+                    android:text="Return/Losses Ratio" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_three_month_rlr"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="3M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_six_month_rlr"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="6M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_nine_month_rlr"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="9M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_twelve_month_rlr"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1.5"
+                    android:fontFamily="@font/bold"
+                    android:text="12M"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="0dp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_date1"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/date"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_date2"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/date"
+                    android:textColor="@color/blueyGreyThree" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_date3"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/date"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_date4"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/date"
+                    android:textColor="@color/blueyGreyThree"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

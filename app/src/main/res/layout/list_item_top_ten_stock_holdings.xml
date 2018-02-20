@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/custom_layout_height"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/custom_layout_height"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="3"
+            android:id="@+id/tvCompanyName"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="@string/title_Company_Name"
+            android:fontFamily="@font/regular"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_NA"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1.5"
+            android:text="@string/title_Overall"
+            android:gravity="center"
+            android:inputType="text"
+            android:textSize="@dimen/text_size_14"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_CP"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/regular"
+            android:text="@string/title_3Years"
+            android:gravity="center"
+            android:inputType="text"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/black" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_PR"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/regular"
+            android:layout_weight="2"
+            android:text="@string/title_5Years"
+            android:gravity="center"
+            android:inputType="text"
+            android:layout_gravity="center"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/black" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
